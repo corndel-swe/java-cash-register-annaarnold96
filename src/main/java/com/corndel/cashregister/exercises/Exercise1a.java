@@ -2,6 +2,8 @@ package com.corndel.cashregister.exercises;
 
 import com.corndel.cashregister.exercises.models.Recipe;
 
+import java.util.List;
+
 public class Exercise1a {
   /**
    * Accepts a recipe object and returns a summary string as below:
@@ -18,6 +20,9 @@ public class Exercise1a {
    */
   public static String getSummary(Recipe recipe) {
     // TODO
-    return null;
+//    Recipe bolognese = new Recipe("Spaghetti Bolognese", List.of("Spaghetti","Beef","Tomato"),4, false);
+
+    String summary = String.format("%s has %d ingredients and serves %d people", recipe.name, recipe.ingredients.size(),recipe.servings);
+    return summary;
   }
 }
