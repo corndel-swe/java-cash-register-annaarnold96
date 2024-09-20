@@ -10,7 +10,14 @@ public class Level1 {
    */
   public static List<Item> removeItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+    for (var item : drawer){
+      if (item.name.equals(name)){
+        item.quantity -= 1;
+
+      }
+
+    }
+    return drawer;
   }
 
   /**
@@ -18,19 +25,26 @@ public class Level1 {
    */
   public static List<Item> addItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+    for (var item : drawer){
+      if (item.name.equals(name)){
+        item.quantity += 1;
+      }
+
+    }
+    return drawer;
   }
+
 
   /**
    * For debugging! Feel free to change it to debug addItem, too.
    * You can add methods like this to the other challenges for debugging.
    */
-  public static void main(String[] args) {
-    removeItem("penny", Drawer.drawer);
-
-    for (var item : Drawer.drawer) {
-      var summary = String.format("%s: %d", item.getName(), item.getQuantity());
-      System.out.println(summary);
-    }
-  }
+//  public static void main(String[] args) {
+//    removeItem("penny", Drawer.drawer);
+//
+//    for (var item : Drawer.drawer) {
+//      var summary = String.format("%s: %d", item.getName(), item.getQuantity());
+//      System.out.println(summary);
+//    }
+//  }
 }

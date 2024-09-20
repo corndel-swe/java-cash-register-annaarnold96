@@ -9,6 +9,13 @@ public class Exercise3b {
    */
   public static int countServings(RecipeBook recipeBook) {
     // TODO
-    return 0;
+
+    int totalServings = 0;
+
+    for (var currRecipe : recipeBook.recipes){
+      totalServings += currRecipe.servings;
+    }
+
+    return totalServings;
   }
 }
