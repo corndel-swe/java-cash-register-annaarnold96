@@ -10,6 +10,20 @@ public class Level4 {
    */
   public static boolean canMakeAmount(int target, List<Item> drawer) {
     // TODO
-    return false;
+    int targetAmount = target;
+    int total = Level3.sumDrawer(drawer);
+    if (total < target){
+      return false;
+    }
+    else {
+      for (var item : drawer) {
+        while (item.value <= targetAmount && item.quantity > 0) {
+          targetAmount -= item.value;
+          item.quantity -= 1;
+        }
+      }
+      return targetAmount == 0;
+
+    }
   }
 }
