@@ -39,12 +39,12 @@ public class Level1 {
    * For debugging! Feel free to change it to debug addItem, too.
    * You can add methods like this to the other challenges for debugging.
    */
-  public static void main(String[] args) {
-    removeItem("penny", Drawer.drawer);
-
-    for (var item : Drawer.drawer) {
-      var summary = String.format("%s: %d", item.getName(), item.getQuantity());
-      System.out.println(summary);
-    }
-  }
+//  public static void main(String[] args) {
+//    removeItem("penny", Drawer.drawer);
+//
+//    for (var item : Drawer.drawer) {
+//      var summary = String.format("%s: %d", item.getName(), item.getQuantity());
+//      System.out.println(summary);
+//    }
+//  }
 }

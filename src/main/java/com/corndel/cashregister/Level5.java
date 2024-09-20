@@ -28,7 +28,44 @@ public class Level5 {
    */
   public static List<Item> transaction(int cost, List<Item> paid, List<Item> drawer) {
     // TODO
-    return null;
+    /**
+     * Cost given and paid given
+     * calculate if change can be given
+     * if yes, add paid to drawer
+     * then remove change
+     * return drawer
+     */
+    System.out.println("1:" + drawer);
+    // Check what change is required and if it can be given
+    var changeRequired = Level3.sumDrawer(paid) - cost;
+    System.out.println(changeRequired);
+    boolean canGiveChange = Level4.canMakeAmount(changeRequired, drawer);
+    System.out.println("2:" + drawer);
+    // If change can be given, add payment into drawer
+    if (canGiveChange){
+      for (var item : paid){
+        Level1.addItem(item.name, drawer);
+        System.out.println(item.name + ":" + item.quantity);
+
+      }
+      System.out.println(drawer);
+
+      // Then make change.
+      for (var item : drawer) {
+        while (item.value <= changeRequired && item.quantity > 0) {
+          changeRequired -= item.value;
+          item.quantity -= 1;
+        }
+      }
+
+    }else {
+      System.out.println("No change available");
+    }
+    System.out.println(drawer);
+    return drawer;
+    }
+
+
+
   }
 
-}
