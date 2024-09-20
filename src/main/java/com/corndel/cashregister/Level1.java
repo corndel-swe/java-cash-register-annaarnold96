@@ -10,7 +10,14 @@ public class Level1 {
    */
   public static List<Item> removeItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+    for (var item : drawer){
+      if (item.name.equals(name)){
+        item.quantity -= 1;
+
+      }
+
+    }
+    return drawer;
   }
 
   /**
@@ -18,8 +25,15 @@ public class Level1 {
    */
   public static List<Item> addItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+    for (var item : drawer){
+      if (item.name.equals(name)){
+        item.quantity += 1;
+      }
+
+    }
+    return drawer;
   }
+
 
   /**
    * For debugging! Feel free to change it to debug addItem, too.
