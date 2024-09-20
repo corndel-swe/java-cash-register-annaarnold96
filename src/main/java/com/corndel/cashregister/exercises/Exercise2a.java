@@ -9,6 +9,14 @@ public class Exercise2a {
    */
   public static int countVeggies(List<Recipe> recipes) {
     // TODO
-    return 0;
+    int vegetarianCount = 0;
+    for (var currRecipe : recipes){
+      if (currRecipe.isVegetarian == true){
+        vegetarianCount += 1;
+
+    }
+
+    }
+    return vegetarianCount;
   }
 }
